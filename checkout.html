@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acquisition Checkout — MAVITAS</title>
+  <meta name="description" content="Complete your acquisition with discreet insured handling. No user account registration required.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="MAVITAS Home">
+        <img src="assets/images/logo.svg" alt="MAVITAS Logo">
+      </a>
+
+      <nav class="menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="collection.html">Collection</a>
+        <a href="concierge.html">Concierge</a>
+        <a href="about.html">Story</a>
+      </nav>
+
+      <div class="actions">
+        <a class="icon-btn" href="login.html">Account</a>
+        <a class="icon-btn cart-trigger" href="checkout.html">Bag <span class="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">NO ACCOUNT REGISTRATION REQUIRED</span>
+        <h1>FINAL<br>ACQUISITION</h1>
+      </div>
+    </section>
+
+    <section class="container checkout-grid">
+      <!-- Form Column -->
+      <div class="form-box-editorial">
+        <div class="eyebrow" style="margin-bottom:16px;">STEP 01 · DELIVERY & DISCRETION</div>
+        <h2 style="font-size:36px; margin-bottom:28px;">Delivery Details</h2>
+
+        <form id="checkoutForm">
+          <div class="field">
+            <label>Full Legal Name</label>
+            <input type="text" required placeholder="e.g. Julian Vance">
+          </div>
+
+          <div class="field">
+            <label>Delivery Email (For Dossier & Tracking)</label>
+            <input type="email" required placeholder="julian@example.com">
+          </div>
+
+          <div class="field">
+            <label>Contact Telephone</label>
+            <input type="tel" required placeholder="+91 98765 43210">
+          </div>
+
+          <div class="field">
+            <label>Discreet Delivery Address</label>
+            <textarea rows="3" required placeholder="Street, Suite / Apartment, City, Postal Code"></textarea>
+          </div>
+
+          <div class="eyebrow" style="margin: 32px 0 16px;">STEP 02 · PAYMENT DISCRETION</div>
+
+          <div class="field">
+            <label>Preferred Payment Method</label>
+            <select required>
+              <option>Insured Wire Transfer / Escrow</option>
+              <option>Private Banking Escrow</option>
+              <option>Credit Card (Encrypted 256-bit)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn primary wide" style="width:100%; margin-top:16px;">
+            Confirm Acquisition →
+          </button>
+        </form>
+      </div>
+
+      <!-- Itemized Summary Column -->
+      <div class="form-box-editorial" style="height: fit-content;">
+        <span class="eyebrow" style="margin-bottom:16px;">SUMMARY DOSSIER</span>
+        <h3 style="font-size:28px; margin-bottom:20px;">Selected Objects</h3>
+
+        <div id="checkoutItemsBox" style="border-top:1px solid var(--border-line); margin-bottom:24px; padding-top:12px;">
+          <!-- Dynamically populated by main.js -->
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border-line); padding-top:20px; margin-top:20px;">
+          <span style="font-family:var(--font-label); font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">Total Acquisition Value</span>
+          <strong id="checkoutTotalDisplay" style="font-family:var(--font-label); font-size:20px;">₹0</strong>
+        </div>
+
+        <div style="margin-top:28px; padding:16px; background:var(--bg-primary); border:1px solid var(--border-champagne); font-size:12px; color:var(--text-secondary); line-height:1.7;">
+          ✦ All MAVITAS acquisitions include fully insured white-glove transit, physical authentication dossier, and 7 days discretion policy.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo-wordmark.svg" alt="MAVITAS Wordmark" style="height: 22px;">
+        </a>
+        <p>
+          A considered marketplace for exceptional objects, authenticated with care and delivered with discretion.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-title">Explore</div>
+        <div class="footer-links">
+          <a href="collection.html">Curated Collection</a>
+          <a href="concierge.html">Private Concierge</a>
+          <a href="about.html">The MAVITAS Story</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">Services</div>
+        <div class="footer-links">
+          <a href="concierge.html">Authentication Process</a>
+          <a href="concierge.html">Private Sourcing Desk</a>
+          <a href="checkout.html">Secure Acquisition</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">Concierge Desk</div>
+        <div class="footer-links">
+          <a href="mailto:concierge@mavitas.example">concierge@mavitas.example</a>
+          <a href="tel:+910000000000">+91 00 0000 0000</a>
+          <span>Mon–Sat · 10:00 – 19:00 IST</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright-bar">
+      <span>© 2026 MAVITAS Luxury Goods. All Rights Reserved.</span>
+      <span>AUTHENTICATED · CONSIDERED · YOURS</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

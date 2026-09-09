@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="42" viewBox="0 0 220 42">
+  <!-- Minimal Champagne Box for M symbol -->
+  <rect x="1" y="5" width="32" height="32" fill="none" stroke="#B59A68" stroke-width="1.2" />
+  <text x="17" y="27" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="21" font-weight="500" fill="currentColor">M</text>
+  <!-- MAVITAS Wordmark -->
+  <text x="46" y="26" font-family="'Space Grotesk', 'Helvetica', sans-serif" font-size="16" font-weight="600" letter-spacing="4.5" fill="currentColor">MAVITAS</text>
+</svg>
