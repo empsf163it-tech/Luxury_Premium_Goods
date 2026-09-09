@@ -549,8 +549,76 @@ function initPageTransitions() {
   });
 }
 
+// Mobile Hamburger Menu Drawer Handler
+function initMobileMenu() {
+  const menuBtn = document.querySelector("#mobileMenuBtn");
+  const menuClose = document.querySelector("#mobileMenuClose");
+  const menuDrawer = document.querySelector("#mobileMenuDrawer");
+  const menuOverlay = document.querySelector("#mobileMenuOverlay");
+
+  if (!menuBtn || !menuDrawer || !menuOverlay) return;
+
+  function openMenu() {
+    menuDrawer.classList.add("active");
+    menuOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    menuDrawer.classList.remove("active");
+    menuOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  menuBtn.addEventListener("click", openMenu);
+  if (menuClose) menuClose.addEventListener("click", closeMenu);
+  menuOverlay.addEventListener("click", closeMenu);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && menuDrawer.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+
+  menuDrawer.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
+}
+
+// Back to Top Button Controller
+function initBackToTop() {
+  let btn = document.querySelector(".back-to-top");
+  if (!btn) {
+    btn = document.createElement("button");
+    btn.className = "back-to-top";
+    btn.id = "backToTopBtn";
+    btn.setAttribute("aria-label", "Back to top");
+    btn.innerHTML = "↑";
+    document.body.appendChild(btn);
+  }
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      btn.classList.add("visible");
+    } else {
+      btn.classList.remove("visible");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
+
 // Initialize Everything on DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
+  initMobileMenu();
+  initBackToTop();
   initDrawer();
   initCustomCursor();
   initPageTransitions();

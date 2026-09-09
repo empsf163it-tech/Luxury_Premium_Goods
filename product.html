@@ -29,8 +29,34 @@
         <a class="icon-btn" href="login.html">Account</a>
         <a class="icon-btn cart-trigger" href="checkout.html">Bag <span class="cart-count">0</span></a>
       </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <div class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-menu-header">
+      <a class="logo" href="index.html">
+        <img src="assets/images/logo.png" alt="MAVITAS Logo" style="height: 32px;">
+      </a>
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close Menu">✕</button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="index.html">Home</a>
+      <a href="collection.html" class="active">Collection</a>
+      <a href="concierge.html">Concierge</a>
+      <a href="about.html">Story & Contact</a>
+      <div class="mobile-menu-divider"></div>
+      <a href="login.html" class="mobile-action-link"><span>✦ Account</span></a>
+      <a href="checkout.html" class="mobile-action-link cart-trigger"><span>✦ Bag</span> <span class="cart-count">0</span></a>
+    </nav>
+  </div>
 
   <main id="productDossierContainer">
     <!-- Rendered dynamically by main.js -->
